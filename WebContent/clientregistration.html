@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="Start your development with Rubic landing page.">
+   <meta name="author" content="Devcrud">
+   <title>Client Registration | Registration</title>
+   <!-- font icons -->
+   <link rel="stylesheet" href="rubic/public_html/assets/vendors/themify-icons/css/themify-icons.css">
+   <!-- Bootstrap + Steller  -->
+   <link rel="stylesheet" href="rubic/public_html/assets/css/rubic.css">
+</head>
+<body>
+
+<!-- Page Header -->
+<!-- End Of Page Header -->
+<h1></h1>
+
+<section class="section" id="contact">
+    <div class="container text-center">
+        <h6 class="display-4 has-line">SIGNUP</h6>
+        <p class="mb-5 pb-2">WELCOME TO GREAT VISION</p>
+
+        <form action="ClientRegistration" method="post" onsubmit="return validateForm()">
+<div class="row mb-4" style="align-content: center; justify-content: center;">
+                <div class="col-md-6">
+                    <div class="form-group pb-1">
+                        <input type="text" class="form-control" required placeholder="Please Enter Your Name" name="name">
+                    </div>
+                    <div class="form-group pb-1">
+                        <input type="email" class="form-control" required placeholder="Please Enter Email Id" name="email">
+                    </div>
+                    <div class="form-group pb-1">
+                        <input type="text" class="form-control" required placeholder="Please Enter Your Number" name="mobile">
+                    </div>
+
+                    <div class="form-group pb-1">
+                        <input type="date" class="form-control" required placeholder="Please Enter Date Of Birth" name="dob">
+                    </div>
+                    <div class="form-group pb-1">
+                        <input type="text" class="form-control" required placeholder="Please Enter Your PAN Card Number" name="pan">
+                    </div>
+                    <div class="form-group pb-1">
+                        <input type="text" class="form-control" required placeholder="Please Enter Your Account Number" name="account">
+                    </div>
+                    <div class="form-group pb-1">
+                        <input type="password" class="form-control" required placeholder="Please Enter Password" name="pwd">
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="SignUP">
+        </form>
+        <!-- Add the "If already have an account, login" button here -->
+<div class="container text-center">
+<br>
+        <p class="text-center">Already have an account? <a href="GoogleAouth.jsp">Login</a></p>
+</div>
+    </div>
+</section>
+
+<!-- main content -->
+<div class="container">
+
+    <!-- Buttons -->
+    <h3 class="mt-5">Copyright 2015
+        <script></script>
+        &copy; <a href="http://www.greatvision.com">GreatVision</a></h3></div>
+<footer class="footer py-4 bg-light">
+    <div class="container text-center">
+        <div class="social-links">
+            <a href="javascript:void(0)" class="text-dark"><i class="ti-facebook"></i></a>
+            <a href="javascript:void(0)" class="text-dark"><i class="ti-twitter-alt"></i></a>
+            <a href="javascript:void(0)" class="text-dark"><i class="ti-google"></i></a>
+            <a href="javascript:void(0)" class="text-dark"><i class="ti-pinterest-alt"></i></a>
+            <a href="javascript:void(0)" class="text-dark"><i class="ti-instagram"></i></a>
+            <a href="javascript:void(0)" class="text-dark"><i class="ti-rss"></i></a>
+        </div>
+    </div>
+    
+</footer>
+<!-- End of page footer -->
+
+<!-- core  -->
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+<!-- steller js -->
+<script src="assets/js/rubic.js"></script>
+
+<script>
+    function validateForm() {
+        var name = document.forms[0].name.value;
+        var email = document.forms[0].email.value;
+        var mobile = document.forms[0].mobile.value;
+        var dob = document.forms[0].dob.value;
+        var pan = document.forms[0].pan.value;
+        var account = document.forms[0].account.value;
+        var password = document.forms[0].pwd.value;
+
+        // Name should not be empty
+        if (name === "") {
+            alert("Name must be filled out");
+            return false;
+        }
+
+        // Email validation using regular expression
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!email.match(emailRegex)) {
+            alert("Invalid email address");
+            return false;
+        }
+
+        // Mobile number validation using regular expression
+        var mobileRegex = /^[0-9]{10}$/; // Assuming 10-digit mobile numbers
+        if (!mobile.match(mobileRegex)) {
+            alert("Invalid mobile number");
+            return false;
+        }
+
+        // Date of birth validation (you can add your own rules)
+        // For example, you can check if the user is at least 18 years old.
+
+        // PAN card validation using regular expression
+        var panRegex = /^([A-Z]){5}([0-9]){4}([A-Z]){1}?$/;
+        if (!pan.match(panRegex)) {
+            alert("Invalid PAN Card number");
+            return false;
+        }
+
+        // Account number validation (you can add your own rules)
+
+        // Password should not be empty
+        if (password === "") {
+            alert("Password must be filled out");
+            return false;
+        }
+
+        // Add more password validation rules (e.g., length, complexity, etc.)
+        if (password.length < 8) {
+            alert("Password should be at least 8 characters long");
+            return false;
+        }
+
+        // If all validations pass, the form will be submitted
+        return true;
+    }
+</script>
+
+</body>
+</html>

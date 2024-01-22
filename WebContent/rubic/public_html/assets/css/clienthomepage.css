@@ -1,0 +1,187 @@
+@CHARSET "ISO-8859-1";
+/* styles.css */
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #3498DB, #E74C3C); /* Gradient background */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.navbar-brand {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff; /* Navbar brand color */
+    text-decoration: none;
+}
+
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Navbar link color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFA000; /* Navbar link hover color */
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #3498DB, #E74C3C); /* Gradient background */
+
+    /* background: linear-gradient(135deg, #2ECC71, #F39C12); Gradient background */
+    color: #fff; /* Text color */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.header-subtitle {
+    font-size: 24px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3498DB, #E74C3C); /* Gradient background */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition : background 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2ECC71, #F39C12); /* Gradient hover background */
+}
+/* Social Media Styles */
+.social-wrapper {
+    background: linear-gradient(135deg, #9b59b6, #3498db); /* Gradient background */
+    color: #fff; /* Text color */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.link {
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #fff; /* Icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.link:hover {
+    color: #FFA000; /* Icon hover color */
+}
+
+
+
+/* foorter start */
+footer {
+    background: linear-gradient(135deg, #ec407a, #ffb74d); /* Gradient from Pink to Orange */
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  /* Footer Icon Styles */
+  footer span i {
+    color: #fff;
+  }
+  
+  /* Copyright Text Styles */
+  .copyright-text {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  /* footer end */
+  /* Add these styles to your CSS file */
+
+/* Tab Container Styles */
+.tabs-container {
+    background-color: #f4f4f4; /* Light gray background color */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+/* Tabs Navigation Styles */
+.tab-nav {
+    background-color: #fff; /* White background color for tabs */
+    border-radius: 10px;
+}
+
+.tab-nav .nav-link {
+    color: #333; /* Dark text color for inactive tabs */
+    font-weight: bold;
+}
+
+.tab-nav .nav-link.active {
+    background-color: #007bff; /* Blue background color for active tab */
+    color: #fff; /* White text color for active tab */
+}
+
+/* Tab Content Styles */
+.tab-content {
+    margin-top: 20px;
+}
+
+/* Tower Image Styles */
+.tower {
+    border-radius: 15px;
+}
+/* Add these styles to your CSS file */
+
+/* Tab 1 Styles */
+#pills-home {
+    background-color: #3498db; /* Blue background color for Tab 1 content */
+    color: #fff; /* White text color for Tab 1 content */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Tab 2 Styles */
+#pills-profile {
+    background-color: #e74c3c; /* Red background color for Tab 2 content */
+    color: #fff; /* White text color for Tab 2 content */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Tab 3 Styles */
+#pills-contact {
+    background-color: #27ae60; /* Green background color for Tab 3 content */
+    color: #fff; /* White text color for Tab 3 content */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Active Tab Styles */
+.tab-content .tab-pane.active {
+    border: 2px solid #2c3e50; /* Dark border for active tab content */
+    border-radius: 8px;
+}
+

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="Start your development with Rubic landing page.">
+   <meta name="author" content="Devcrud">
+   <title>welcome to Kuber Group</title>
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" href="./assets/css/style.css">-->
+    <link rel="stylesheet" href="rubic/public_html/assets/css/index.css">
+    <link rel="stylesheet" href="rubic/public_html/assets/css/rubic.css">
+    <link rel="stylesheet" href="rubic/public_html/assets/css/homepage.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- Add this script to your HTML -->
+<script>
+  // Function to add a class when an element is in the viewport
+  function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle the rotation animation
+  function handleRotation() {
+    var cards = document.querySelectorAll('.card-achivement');
+    
+    cards.forEach(function(card) {
+      if (isElementInViewport(card)) {
+        card.classList.add('rotate-animation');
+      } else {
+        card.classList.remove('rotate-animation');
+      }
+    });
+  }
+
+  // Attach the event listener to the scroll event
+  document.addEventListener('scroll', handleRotation);
+
+  // Trigger the handleRotation function on page load
+  document.addEventListener('DOMContentLoaded', handleRotation);
+</script>
+
+  <header class="header-bg sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <strong><span class="style3">KUBER</span> <span class="style4">GROUP</span></strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto"> <!-- Adjust the alignment to the right -->
+            <li class="nav-item active">
+              <a class="nav-link" href="https://kubergroup.in/KuberGroup/GoogleAouth.jsp">Login/Signup<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          
+          <div class="contact-us">
+            <div class="contact-details">
+              <div class="text">Customer Care :</div>
+            </div>
+            <div class="text"><i class="fa fa-phone" aria-hidden="true"></i>: +91 8830993151</div>
+            <div class="text"><i class="fa fa-envelope" aria-hidden="true"></i>: support@kubergroup.in</div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+      <!-- End::header -->
+
+      <!-- Begin::Hero section -->
+      <section>
+        <div class="hero">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                  <div class="left">
+                    <div class="short-heading">WE GIVE</div>
+                    <div><h1 class="heading">Recommendation</h1></div>
+                    <div class="sub-heading"><h3><span>of the Right Stocks at the right time</span></h3></div>
+                    <div class="redirection-section">
+                      <div class="redirect"><a href="https://kubergroup.in/KuberGroup/GoogleAouth.jsp">Login/Signup</a></div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="enquiry">
+                  <div class="header-form">
+                    <h3>Enquiry form</h3>
+                    </div>
+                    <form accept="#" method="post">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Name"Required >
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div Required>
+                      <div class="form-group">
+                        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Mobile Number">
+                      </div Required>
+                      <!-- <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div> -->
+                      <button type="submit" class="btn btn-block submit">Submit</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+
+      <!-- End::Hero section -->
+
+      <!-- Begin::tips section -->
+
+      <section class="py-5 bg-profit">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center pb-5">
+                <h3>Share Market Tips</h3>
+                <h5>Why KUBER GROUP® ?</h5>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-achivement text-center p-3 bg-white">
+                <img src="rubic/public_html/assets/imgs/research.webp" class="img-fluid" alt="research">
+                <p class="tips-descoption">Perfect Technical & Fundamental research of Stocks and Commodities market</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-achivement text-center p-3 bg-white">
+                <img src="rubic/public_html/assets/imgs/experience-10.webp" class="img-fluid" alt="research">
+                <p class="tips-descoption">10 Years of Wealth Creation Experience</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-achivement text-center p-3 bg-white">
+                <img src="rubic/public_html/assets/imgs/calls.webp" class="img-fluid" alt="research">
+                <p class="tips-descoption">Risk Managed Calls</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End::tips section -->
+
+      <!-- Begin:: wining pickes -->
+      <section class="py-5 bg-intraday">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center pb-5">
+                <h3>Our Winning Pickes</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-4 mb-5">
+                        <div class="card-profit text-center bg-white">
+                        <div class="curve-image">
+                          <h6 class="title">EQUITY</h6>
+                        </div>
+                          <h3 class="share-name">Apollo Tyre</h3>
+                          <div class="profit-table">
+                            <div class="info buy-info">
+                              <div class="price-info">Buy Price:</div>
+                              <div class="price-value"> ₹ 70</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Buy Date:</div>
+                              <div class="price-value">19/06/2023</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peak Price:</div>
+                              <div class="price-value">₹ 250</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peck Date:</div>
+                              <div class="price-value">20/07/2023</div>
+                            </div>
+                            <div class="info profit-info">
+                              <div class="price-info">Profit</div>
+                              <div class="price-value">₹ 3045</div>
+                            </div>
+                            <div class="intraday">IN INTRADAY</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                      <div class="card-profit text-center bg-white">
+                        <div class="curve-image">
+                          <h6 class="title">EQUITY</h6>
+                        </div>
+                          <h3 class="share-name">TATA MOTORS</h3>
+                          <div class="profit-table">
+                            <div class="info buy-info">
+                              <div class="price-info">Buy Price:</div>
+                              <div class="price-value"> ₹ 495</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Buy Date:</div>
+                              <div class="price-value">23/08/2023</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peak Price:</div>
+                              <div class="price-value">₹ 605</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peck Date:</div>
+                              <div class="price-value">03/10/2023</div>
+                            </div>
+                            <div class="info profit-info">
+                              <div class="price-info">Profit</div>
+                              <div class="price-value">₹ 9000</div>
+                            </div>
+                            <div class="intraday">IN INTRADAY</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                      <div class="card-profit text-center bg-white">
+                        <div class="curve-image">
+                          <h6 class="title">EQUITY</h6>
+                        </div>
+                          <h3 class="share-name">RELIENCE</h3>
+                          <div class="profit-table">
+                            <div class="info buy-info">
+                              <div class="price-info">Buy Price:</div>
+                              <div class="price-value"> ₹ 239</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Buy Date:</div>
+                              <div class="price-value">02/07/2023</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peak Price:</div>
+                              <div class="price-value">₹ 500</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peck Date:</div>
+                              <div class="price-value">09/08/2023</div>
+                            </div>
+                            <div class="info profit-info">
+                              <div class="price-info">Profit</div>
+                              <div class="price-value">₹ 4044</div>
+                            </div>
+                            <div class="intraday">IN INTRADAY</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row">
+                    <div class="col-md-4 mb-5">
+                      <div class="card-profit text-center bg-white">
+                        <div class="curve-image">
+                          <h6 class="title">EQUITY</h6>
+                        </div>
+                          <h3 class="share-name">ONGC</h3>
+                          <div class="profit-table">
+                            <div class="info buy-info">
+                              <div class="price-info">Buy Price:</div>
+                              <div class="price-value"> ₹ 129</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Buy Date:</div>
+                              <div class="price-value">5/09/2023</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peak Price:</div>
+                              <div class="price-value">₹ 350</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peck Date:</div>
+                              <div class="price-value">08/09/2023</div>
+                            </div>
+                            <div class="info profit-info">
+                              <div class="price-info">Profit</div>
+                              <div class="price-value">₹ 7090</div>
+                            </div>
+                            <div class="intraday">IN INTRADAY</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                      <div class="card-profit text-center bg-white">
+                        <div class="curve-image">
+                          <h6 class="title">EQUITY</h6>
+                        </div>
+                          <h3 class="share-name">HDFC BANK</h3>
+                          <div class="profit-table">
+                            <div class="info buy-info">
+                              <div class="price-info">Buy Price:</div>
+                              <div class="price-value"> ₹ 400</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Buy Date:</div>
+                              <div class="price-value">21/04/2023</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peak Price:</div>
+                              <div class="price-value">₹ 768</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peck Date:</div>
+                              <div class="price-value">23/04/2023</div>
+                            </div>
+                            <div class="info profit-info">
+                              <div class="price-info">Profit</div>
+                              <div class="price-value">₹ 6000</div>
+                            </div>
+                            <div class="intraday">IN INTRADAY</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                      <div class="card-profit text-center bg-white">
+                        <div class="curve-image">
+                          <h6 class="title">EQUITY</h6>
+                        </div>
+                          <h3 class="share-name">SBI BANK</h3>
+                          <div class="profit-table">
+                            <div class="info buy-info">
+                              <div class="price-info">Buy Price:</div>
+                              <div class="price-value"> ₹ 367</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Buy Date:</div>
+                              <div class="price-value">14/08/2023</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peak Price:</div>
+                              <div class="price-value">₹ 985</div>
+                            </div>
+                            <div class="info">
+                              <div class="price-info">Peck Date:</div>
+                              <div class="price-value">20/08/2023</div>
+                            </div>
+                            <div class="info profit-info">
+                              <div class="price-info">Profit</div>
+                              <div class="price-value">₹ 5500</div>
+                            </div>
+                            <div class="intraday">IN INTRADAY</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+      </section>
+
+      <!-- End:: wining pickes -->
+      <!-- Begin::service -->
+
+      <section class="py-5 bg-profit" > 
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center pb-5">
+                <h3>Our Services</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="accordion">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-2">
+              <div class="card-achivement text-center p-3 bg-white" id="headingOne" onclick="redirectToResearch('research-equity.html')">
+                <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <img src="rubic/public_html/assets/imgs/service1.webp" class="img-fluid" alt="research">
+                  <p class="tips-descoption">EQUITY</p>
+                  </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card-achivement text-center p-3 bg-white" id="headingTwo" onclick="redirectToResearch('research-mcx.html')">
+                <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <img src="rubic/public_html/assets/imgs/service2.webp" class="img-fluid" alt="research">
+                  <p class="tips-descoption">MCX</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card-achivement text-center p-3 bg-white" id="headingThree" onclick="redirectToResearch('research-ncdex.html')">
+                <a data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTree">
+                <img src="rubic/public_html/assets/imgs/service3.webp" class="img-fluid" alt="research">
+                <p class="tips-descoption">NCDEX</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card-achivement text-center p-3 bg-white" id="headingFour" onclick="redirectToResearch('research-currency.html')">
+                <a data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                <img src="rubic/public_html/assets/imgs/service4.webp" class="img-fluid" alt="research">
+                <p class="tips-descoption">CURRENCY</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card-achivement text-center p-3 bg-white" id="headingFive" onclick="redirectToResearch('research-forex.html')">
+                <a data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                <img src="rubic/public_html/assets/imgs/service5.webp" class="img-fluid" alt="research">
+                <p class="tips-descoption">FOREX</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+      <!-- Begin::service -->
+
+      <!-- Begin::client -->
+      <section class="py-5 bg-intraday">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center pb-5">
+                <h3>Our Clients</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="com-md-12">
+            <div class="slide-cards"></div>
+            <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card-clients">
+                        <div class="client-review">
+                          <p>
+                            Exceptional service marked by an impressive accuracy rate of over 85% in commodities. My heartfelt gratitude to your stellar research team for delivering timely and invaluable assistance.</p>
+                          <div class="clien-name"> Shubhi Agrawal (Madhya Pradesh)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card-clients">
+                        <div class="client-review">
+                          <p>
+                            I've been availing your company's services for the past two months, and I must say the assistance and support provided by the advisor are unparalleled. I am completely content with the outstanding service you offer.</p>
+                          <div class="clien-name"> Sidhant khade (Rajasthan)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card-clients">
+                        <div class="client-review">
+                          <p>
+                            Top-notch service with an outstanding accuracy rate exceeding 99% in commodities. I extend my sincere appreciation to your exceptional research team for providing me with timely and invaluable assistance.</p>
+                          <div class="clien-name"> Rahul Mehta (Delhi)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card-clients">
+                        <div class="client-review">
+                          <p>
+                            I've been a part of your trading advisory services for quite some time now, and I'm truly impressed with the guidance and insights I receive. Your expertise in the trading domain has made a significant difference in my investment journey.</p>
+                          <div class="clien-name"> Ayushi Patidar (Indore)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                   
+              <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- End-client -->
+
+  <!-- Begin::faq -->
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center pb-5">
+          <h3>Stock Market Advisory</h3>
+        </div>
+      </div>
+    </div>
+    <div id="accordion" class="faq">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Your Search for a Reliable Share Market Tips Ends Here
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            Your quest for dependable Share Market Tips concludes right here. We understand that navigating the complexities of the market requires more than just information – it demands accuracy, insight, and a trustworthy partner. At Kuber Group®, we take pride in being that reliable ally. With over a decade of experience, our commitment to delivering timely, well-researched tips has made us a trusted name in the industry. Let us be the guide to your financial success, helping you make informed decisions and achieve your aspirations in the world of share markets. </div>
+        </div>
+      </div>
+      <!-- end:card -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Why Kuber Group® as Stock Market Advisory?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            lies in our unwavering commitment to excellence. Unlike the commonplace, we go beyond generic advice. Kuber Group® stands out as a beacon of trust and expertise with over a decade of dedicated service. Our recommendations are not just timely; they are backed by a team of seasoned professionals who understand the nuances of the market. When you choose us, you opt for precision, reliability, and a partner genuinely invested in your financial success. Join hands with Kuber Group® - where your financial goals meet expert guidance.          </div>
+        </div>
+      </div>
+      <!-- end:card -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Reasons why equity investors and traders trust our Share Market Tips Services
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            Uncover the reasons why discerning equity investors and traders place their trust in our Share Market Tips Services. It's not just about providing tips; it's about delivering a level of expertise and reliability that sets us apart. Our commitment to in-depth research, timely insights, and a customer-centric approach forms the foundation of the trust our clients place in us. Experience the difference in our services as we strive to exceed expectations and empower you in your journey through the dynamic world of equity markets.          </div>
+        </div>
+      </div>
+      <!-- end:card -->
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+              Quick Overview of Share Recommendations and Other Services
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            Explore a brief yet comprehensive overview of our share recommendations and additional services. We aim to provide you with concise insights into market trends, empowering you to make informed decisions. Our suite of services goes beyond recommendations, offering a holistic approach to support your financial goals. Discover the efficiency and depth of our offerings as we guide you through the intricacies of the stock market landscape.          </div>
+        </div>
+      </div>
+      <!-- end:card -->
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+              Most Reliable Stock Market Advisory Services in India
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            We take pride in being recognized as one of the most reliable providers of stock market advisory services in India. Our commitment to accuracy, integrity, and client satisfaction sets us apart. With a seasoned team of experts and a track record of success, we strive to deliver unparalleled guidance to investors and traders. Experience the assurance of trustworthy advice as you navigate the dynamic landscape of the stock market with us.          </div>
+        </div>
+      </div>
+      <!-- end:card -->
+      <div class="card">
+        <div class="card-header" id="headingSix">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+              Services we are offering
+            </button>
+          </h5>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            We provide a comprehensive range of services to cater to your financial needs in the stock market. Our offerings include expert stock market advisory services, ensuring you receive accurate and timely guidance. With a commitment to excellence, we aim to assist you in achieving your financial goals through our dedicated and professional services. Explore our array of offerings designed to enhance your trading and investment experience.          </div>
+        </div>
+      </div>
+      <!-- end:card -->
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+              Why Kuber Group Advisory® as a Share Market Tips Company?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            We are not just a Share Market Tips Company; we are your strategic partner in wealth creation. What sets us apart is our unwavering dedication to your financial well-being. With a legacy of trust spanning over a decade, Kuber Group Advisory® has consistently delivered value beyond expectations. Our team of experts doesn't just provide tips; we craft personalized strategies tailored to your unique financial goals. Choosing us means choosing a trusted ally committed to navigating the complexities of the market, ensuring your investments thrive. Experience the Kuber Group Advisory® difference – where expertise meets reliability.          </div>
+        </div>
+      </div>
+      <!-- end:card -->
+    </div>
+  </div>
+
+</section>
+
+<!-- End::faq -->
+
+      <footer class="pt-5 text-center text-white">
+        <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Get in Touch With Us</h4>
+            <div class="pb-2 pt-4">
+              <span><i class="fa fa-map-marker fa-2x"></i></span>
+            </div>
+            <p class="">Flat No 101,102 , 1st Floor, Gulshan Tower, Ram Nagar Extension, Opposites Rameshwar mandir, Amravti Maharashtra 444605.</p>
+          </div>
+
+          <div class="col-md-4">
+            <h4 class="text-capitalize">Contact Us</h4>
+            <div class="pb-2 pt-4">
+              <span><i class="fa fa-phone fa-2x"></i></span>
+            </div>
+            <p class="text-capitalize">Mobile : +91 8830993151</p>
+          </div>
+        <div class="col-md-4 text-light">
+          <h4 class="text-capitalize">Email Address</h4>
+          <div class="pb-2 pt-4">
+            <span><i class="fa fa-envelope fa-2x"></i></span>
+          </div>
+          <p class="">Email : support@kubergroup.in</p>
+        </div>
+      </div>
+       
+          <div class="row">
+            <div class="col-md-12">
+              <p class="copyright-text"> Copyright © 2011-2023 All Rights Reserved Kuber Group</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      function redirectToResearch(page) {
+        // Redirect to the specified research page
+        window.location.href = page;
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

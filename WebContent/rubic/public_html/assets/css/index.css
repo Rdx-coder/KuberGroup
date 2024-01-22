@@ -1,0 +1,680 @@
+@CHARSET "ISO-8859-1";
+/* Body styles */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  .header-bg {
+    background: linear-gradient(45deg, #FF6B6B, #556270);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  /* ---- */
+/* Add this CSS to your existing styles */
+
+/* Navbar Brand Styles */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5252; /* Cherry color */
+    text-decoration: none;
+    display: inline-block;
+    animation: pulseAnimation 4s infinite; /* Pulse animation */
+}
+
+.navbar-brand strong {
+    display: block;
+}
+
+.navbar-brand .style3 {
+    color: #FFD740; /* Amber color */
+}
+
+.navbar-brand .style4 {
+    color: #18FFFF; /* Cyan color */
+}
+
+/* Animation Keyframes */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+  
+  /* /// */
+  .navbar-brand {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    background-color: teal;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: white;
+    height: 3px;
+    width: 30px;
+  }
+  
+  .navbar-nav {
+    margin-top: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f39c12;
+  }
+  
+  .contact-icon a i {
+    color: #ffffff;
+  }
+  
+  .contact-details {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .contact-details .text {
+    margin-right: 5px;
+  }
+  
+  .contact-details .number a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-details .number a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero section styles */
+  .hero-section {
+    background: linear-gradient(45deg, #45B649, #DCE35B);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  /* Feature section styles */
+  .feature-section {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 80px 0;
+  }
+  
+  .feature-item {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .feature-item i {
+    font-size: 48px;
+  }
+  
+  .feature-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Call-to-action section styles */
+  .cta-section {
+    background-color: #e74c3c;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  .cta-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .cta-btn {
+    background-color: #ffffff;
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #34495e;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #34495e;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    font-size: 16px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-toggler {
+      margin: 8px 0;
+    }
+  
+    .navbar-nav .nav-link {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+/* header close  */
+
+/* Hero section styles */
+.hero {
+    background: linear-gradient(45deg, #FF6B6B, #556270);
+    padding: 80px 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .left {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .short-heading {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f39c12;
+  }
+  
+  .heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .sub-heading {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  
+  .redirection-section {
+    margin-top: 20px;
+  }
+  
+  .redirect a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #f39c12;
+    transition: background-color 0.3s ease;
+  }
+  
+  .redirect a:hover {
+    background-color: #34495e;
+  }
+  
+  /* Enquiry form styles */
+  .enquiry {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .header-form h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333; /* Added color style */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .btn.submit {
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.submit:hover {
+    background-color: #e74c3c;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (min-width: 576px) {
+    .heading {
+      font-size: 42px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero {
+      padding: 100px 40px;
+    }
+    
+    .left {
+      max-width: 60%;
+    }
+    
+    .short-heading {
+      font-size: 18px;
+    }
+    
+    .sub-heading {
+      font-size: 20px;
+    }
+    
+    .redirect a {
+      padding: 15px 30px;
+      font-size: 18px;
+    }
+    
+    .header-form h3 {
+      font-size: 28px;
+    }
+    
+    .form-control {
+      padding: 15px;
+    }
+    
+    .btn.submit {
+      font-size: 18px;
+      padding: 15px 30px;
+    }
+  }
+  /* End::Hero section    */
+
+  /* Winning Picks section styles */
+.bg-intraday {
+    background: linear-gradient(135deg, #3498db, #e74c3c); /* Gradient from Blue to Red */
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .winning-picks h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .slide-cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-profit {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #ec407a, #ffb74d); /* Gradient from Pink to Orange */
+    color: #ffffff;
+    position: relative;
+  }
+  
+  .curve-image {
+    background: linear-gradient(135deg, #e74c3c, #3498db); /* Gradient from Red to Blue */
+    padding: 15px;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .curve-image h6 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .share-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .profit-table {
+    padding: 20px;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .price-info,
+  .price-value {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .intraday {
+    background: linear-gradient(135deg, #43a047, #7cb342); /* Gradient from Green to Light Green */
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Add hover effect to the cards */
+  .card-profit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .card-profit {
+      margin-bottom: 20px;
+    }
+  }
+    /* END Winning Picks section styles */
+
+    /* Services section styles */
+.bg-profit {
+    background: linear-gradient(135deg, #3498db, #e74c3c); /* Gradient from Blue to Red */
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .our-services h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #accordion {
+    margin-top: 20px;
+  }
+  
+  .card-achivement {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #ec407a, #ffb74d); /* Gradient from Pink to Orange */
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .card-achivement img {
+    max-width: 100%;
+  }
+  
+  .tips-descoption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Add hover effect to the cards with animation */
+  .card-achivement:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  /* Additional styles for the rotation animation */
+.rotate-animation {
+    transform: rotate(360deg);
+    transition: transform 5s ease;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .card-achivement {
+      margin-right: 0;
+    }
+  }
+      /* END Services section styles */
+
+      /* Add this CSS to your existing styles or create a new CSS file */
+
+/* Client Section Styles */
+.card-clients {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.client-review {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.clien-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #3498db;
+}
+
+/* Carousel Animation Styles */
+.carousel-inner {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Hover Effects for Client Reviews */
+.card-clients:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Carousel Navigation Arrows Styles */
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    color: #3498db;
+    font-size: 30px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    color: #21618C;
+}
+
+/* Apply Different Animations to Different Reviews */
+.client-review:nth-child(even) {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.client-review:nth-child(odd) {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card-clients {
+        width: 80%;
+        margin: 15px auto;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*END  Client Section Styles */
+
+/* Add this CSS to your existing styles */
+
+/* FAQ Section Header Styles */
+.faq h3 {
+    color: #fff;
+    background: linear-gradient(135deg, #FF4081, #FFC107); /* Gradient from Pink to Yellow */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  .faq h3:hover {
+    background: linear-gradient(135deg, #D81B60, #FFA000); /* Hover gradient background */
+  }
+  
+  .faq h3::before {
+    content: '\2022'; /* Add a bullet point before the text */
+    color: #FF4081; /* Bullet color */
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  /* FAQ Section Container Styles */
+  .faq .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* FAQ Section Text Styles */
+  .faq p {
+    color: #333;
+  }
+  
+  /* FAQ Accordion Icon Styles */
+  .faq .btn-link::after {
+    content: '\203A'; /* Add a right-pointing arrow after the button text */
+    color: #FF4081; /* Arrow color */
+    font-size: 18px;
+    margin-left: 5px;
+  }
+  
+  .faq .btn-link.collapsed::after {
+    transform: rotate(90deg); /* Rotate the arrow when collapsed */
+  }
+  
+  /* FAQ Accordion Panel Styles */
+  .faq .card {
+    border: none;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow to the accordion panels */
+  }
+  
+  .faq .card-body {
+    padding: 20px;
+  }
+  .faq {
+    overflow: hidden; /* Prevent content from overflowing on mobile */
+  }
+  
+  /* FAQ Section Responsive Styles */
+  @media (max-width: 768px) {
+    .faq .container {
+      padding: 0 15px;
+    }
+  }
+/* end FAQ  */
+
+/* Add this CSS to your existing styles */
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #ec407a, #ffb74d); /* Gradient from Pink to Orange */
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  /* Footer Icon Styles */
+  footer span i {
+    color: #fff;
+  }
+  
+  /* Copyright Text Styles */
+  .copyright-text {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="Start your development with Rubic landing page.">
+   <meta name="author" content="Devcrud">
+   <title>KUBER GROUP Login  page | LOGIN</title>
+   <!-- font icons -->
+   <link rel="stylesheet" href="rubic/public_html/assets/vendors/themify-icons/css/themify-icons.css">
+   <!-- Bootstrap + Steller  -->
+   <link rel="stylesheet" href="rubic/public_html/assets/css/rubic.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+         /* Add the linear gradient background */
+         background: linear-gradient(135deg, #3498DB, #E74C3C);
+         margin: 0; /* Remove default body margin */
+         font-family: 'Your-Preferred-Font', sans-serif; /* Set your preferred font */
+         color: #fff; /* Set text color to white or any other suitable color for better visibility on the gradient */
+      }
+
+      /* Add the rest of your existing styles here */
+      /* ... */
+   </style>
+</head>
+<!-- Include Font Awesome CSS in the <head> section -->
+
+<style>
+  /* Button Styles */
+  .google-login-button {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #4285F4; /* Google Blue */
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+  }
+
+  .google-login-button:hover {
+    background: #4285F4;
+    color: #fff;
+  }
+
+  /* Icon Styles */
+  .google-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #4285F4;
+  }
+
+  /* Button Text Styles */
+  .button-text {
+    font-size: 18px;
+  }
+</style>
+
+<body>
+
+   <!-- Page Header -->
+     <!-- End Of Page Header -->
+<h1></h1>
+
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">LOGIN</h6>
+            <p class="mb-5 pb-2">WELCOME TO KUBER GROUP</p>
+
+            <form action="ClientLogin" method="post" >
+<div class="row mb-4" style="align-content: center; justify-content: center;">
+                    <div class="col-md-6">
+                        <div class="form-group pb-1">
+                            <input type="email" class="form-control" required placeholder="Please Enter Email Id" name="email">            
+                        </div>
+                        <div class="form-group pb-1">
+                            <input type="password" class="form-control" required placeholder="Please Enter Password" name="pwd" >          
+                        </div>
+     			     </div>
+                    
+                </div>
+                <input type="submit" class="btn btn-primary btn-block" value="LogIn ">
+                <br>
+                OR
+                <br>
+                <br>
+              <a href="GoogleAouth.jsp" class="google-login-button">
+  <div class="google-icon">
+    <i class="fab fa-google"></i>
+  </div>
+  <div class="button-text">New User Register</div>
+</a>
+
+
+
+       
+            </form>
+     
+        </div>
+    </section>
+
+   <!-- main content -->
+<div class="container">
+
+      <!-- Buttons -->
+   <h3 class="mt-5">Copyright 2023 
+       
+   &copy; <a href="">Kuber Group</a></h3>
+</div>
+   <footer class="footer py-4 bg-light"><div class="container text-center">
+     <div class="social-links">
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-rss"></i></a>
+     </div>
+        </div>
+</footer>
+    <!-- End of page footer -->
+   
+   <!-- core  -->
+   <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+   <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- steller js -->
+    <script src="assets/js/rubic.js"></script>
+
+</body>
+</html>
