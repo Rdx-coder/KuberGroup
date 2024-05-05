@@ -182,7 +182,24 @@
          </div>
     </section>
 
-   
+    <!-- Main content
+    <div class="container">
+        <h3 class="mt-5">Copyright 2015 <script></script> &copy; <a href="http://www.greatvison.com">KuberGroup</a></h3>
+    </div>  
+    
+    <footer class="footer py-4 bg-light">
+        <div class="container text-center">
+            <div class="social-links">
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="text-dark"><i class="ti-rss"></i></a>
+            </div>
+        </div>
+    </footer>
+-->
     <!-- Core JavaScript -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -190,6 +207,6 @@
     <!-- Your custom JavaScript -->
     <script src="assets/js/rubic.js"></script>
         
-    
+    </div>
 </body>
 </html>

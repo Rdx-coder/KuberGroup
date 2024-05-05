@@ -104,7 +104,7 @@ public class ClientStatus extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/indore", "root", "123456");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/indore", "root", "12345678");
             String sql = "UPDATE customerstatus SET customerpay=?, netprofit=?, netloss=? WHERE id=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, customerPay);
@@ -132,7 +132,7 @@ public class ClientStatus extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/indore", "root", "123456");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/indore", "root", "12345678");
             String sql = "DELETE FROM customerstatus WHERE id=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);

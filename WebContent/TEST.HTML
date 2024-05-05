@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Card</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .card-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+            flex: 1;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        .value {
+            flex: 2;
+            text-align: right;
+        }
+
+        .profit {
+            color: green;
+        }
+
+        .loss {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-row">
+        <div class="label">Date</div>
+        <div class="value">2024-04-09</div>
+    </div>
+    <div class="card-row">
+        <div class="label">Stock</div>
+        <div class="value">BANK45100</div>
+    </div>
+    <div class="card-row">
+        <div class="label">Buy Price</div>
+        <div class="value">2223</div>
+    </div>
+    <div class="card-row">
+        <div class="label">QT.</div>
+        <div class="value">23232</div>
+    </div>
+    <div class="card-row">
+        <div class="label">Sell Price</div>
+        <div class="value">231</div>
+    </div>
+    <div class="card-row">
+        <div class="label">Qt.</div>
+        <div class="value">32</div>
+    </div>
+    <div class="card-row">
+        <div class="label">Profit</div>
+        <div class="value profit">22323</div>
+    </div>
+    <div class="card-row">
+        <div class="label">Loss</div>
+        <div class="value loss">10</div>
+    </div>
+</div>
+
+</body>
+</html>

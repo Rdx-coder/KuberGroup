@@ -26,9 +26,9 @@ public class AdminLogin extends HttpServlet {
 		response.setContentType("text/html");
 		String id=request.getParameter("id");
 		String pwd=request.getParameter("pwd");
-		if(id.equals("admin")&&pwd.equals("Kuber@Group"))
+		if(id.equals("Admin")&&pwd.equals("kuber#group"))
 		{
-			response.sendRedirect("adminhome.html");
+			response.sendRedirect("adminhomee.html");
 			//response.sendRedirect("Adminhome");
 			//Cookie ck=new Cookie("uid",id);
 			//response.addCookie(ck);

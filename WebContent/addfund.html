@@ -2,68 +2,141 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            width: 300px; /* Set a fixed width for the card */
-            margin: auto;
-            text-align: center;
+        body {
+            background-color: #f5f5f5;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #3498DB, #E74C3C);
-            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             padding: 20px;
         }
 
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 80%; /* Adjust width as needed */
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px; /* Limit maximum width */
+        }
+
         .title {
-            color: white;
-            font-size: 18px;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .scanner-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         button {
             border: none;
-            outline: 0;
+            outline: none;
             display: inline-block;
-            padding: 8px;
+            padding: 10px 20px;
             color: white;
-            background-color: #000;
+            background-color: #007bff;
             text-align: center;
             cursor: pointer;
-            width: 100%;
+            border-radius: 5px;
             font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
 
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: white;
+        button:hover {
+            background-color: #0056b3;
         }
 
-        button:hover, a:hover {
-            opacity: 0.7;
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
-        /* Responsive styles */
+        .payment-methods img {
+            width: 50px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        .chart-container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
         @media screen and (max-width: 600px) {
             .card {
-                width: 100%; /* Set width to 100% on smaller screens */
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
 
-<h2 style="text-align:center">ADD FUND</h2>
-
-<div class="card">
-    <img src="rubic/public_html/assets/imgs/qr.jpg.jpeg" alt="SCANNER" style="width:100%">
-    
-    <p class="title"></p>
-    <p></p>
-    
-       <p><button>ADD FUND WITH QR CODE</button></p>
-   
+<div class="container">
+    <div class="card">
+        <h2 class="title">Add Fund</h2>
+        <img src="rubic/public_html/assets/imgs/kubergr.jpg" alt="QR Code" class="scanner-img">
+        <p>Scan the QR Code or select a payment method below:</p>
+        <div class="payment-methods">
+			<i class="fa fa-cc-visa" style="font-size:36px"></i>
+			<i class="fa fa-cc-mastercard" style="font-size:36px"></i>
+			<i class="fa fa-google-wallet" style="font-size:36px;"></i>
+        </div>
+        <button>Scan QR Code</button>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
+</div>
+ 
+
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Funds',
+                data: [
+                    50000, 120000, 110000, 130000, 104500, 150000, 135000, 170000, 160500, 190000, 170500, 190900,
+                    175000, 185000, 175000, 190000, 180000, 200000, 195000, 210000, 215000, 250000, 210000, 290000
+                ],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
 
 </body>
 </html>

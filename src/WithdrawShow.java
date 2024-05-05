@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -47,28 +48,43 @@ public class WithdrawShow extends HttpServlet {
                 out.println("<th>Account Holder Name</th>");
                 out.println("<th>UPI ID</th>");
                 out.println("<th>Amount</th>");
+                out.println("<th>Email ID</th>");
+                out.println("<th>Status</th>");
+                out.println("<th>Time</th>");
+                out.println("<th>Date</th>");
                 out.println("<th>Action</th>");
                 out.println("</tr>");
 
+                SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
                 do {
-                    String refrenceId = rs.getString("refrence_id");
-                    String mPin = rs.getString("m_pin");
                     String accountNo = rs.getString("account_no");
+                    String mPin = rs.getString("m_pin");
                     String accountHolderName = rs.getString("account_holder_name");
                     String upiId = rs.getString("upi_id");
                     String amount = rs.getString("amount");
+                    String emailId = rs.getString("email_id");
+                    String status = rs.getString("status");
+                    String time = timeFormat.format(rs.getTimestamp("time"));
+                    String date = dateFormat.format(rs.getDate("date"));
 
-                    out.println("<form action='WithdrawShowUpdate' method='post'>");
                     out.println("<tr>");
-                    out.println("<td> " + accountNo + "</td>");
-                    out.println("<td> " + mPin + "</td>");
-                    out.println("<td> " + accountHolderName + "</td>");
-                    out.println("<td> " + upiId + "</td>");
+                    out.println("<td>" + accountNo + "</td>");
+                    out.println("<td>" + mPin + "</td>");
+                    out.println("<td>" + accountHolderName + "</td>");
+                    out.println("<td>" + upiId + "</td>");
                     out.println("<td>" + amount + "</td>");
-                    //out.println("<td><input type='submit' value='Update' /></td>");
-                    out.println("<td><a href='WithdrawShowDelete?account_no=" + accountNo + "'>Delete</a></td>");
-                    out.println("</tr>");
+                    out.println("<td>" + emailId + "</td>");
+                    out.println("<form action='WithdrawShowUpdate' method='post'>");
+                    out.println("<input type='hidden' name='account_no' value='" + accountNo + "'>");
+                    out.println("<td><input type='text' name='status' value='" + status + "'></td>");
+                    out.println("<td>" + time + "</td>");
+                    out.println("<td>" + date + "</td>");
+                    out.println("<td><input type='submit' value='Update' onclick='return confirm(\"Are you sure you want to update?\")'></td>");
                     out.println("</form>");
+                    out.println("<td><a href='WithdrawShowDelete?account_no=" + accountNo + "' onclick='return confirm(\"Are you sure you want to delete?\")'>Delete</a></td>");
+                    out.println("</tr>");
                 } while (rs.next());
 
                 out.println("</table>");
