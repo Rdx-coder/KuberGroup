@@ -1,54 +1,219 @@
-<%@ page import="java.io.*, java.net.*, org.json.simple.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="org.json.simple.parser.JSONParser" %>
-<%@ page import="java.io.*, java.net.*, org.json.simple.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Fetch Option Chain Data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Form styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        /* Payment methods */
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .payment-method {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .payment-method i {
+            font-size: 40px;
+            color: #666;
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+        .payment-method p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        .payment-method:hover {
+            transform: translateY(-5px);
+        }
+        .payment-method i:hover {
+            color: #007bff;
+        }
+        /* QR Code section */
+        .qr-code-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .qr-code-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .qr-code-btn:hover {
+            background-color: #0056b3;
+        }
+        /* Desktop warning */
+        .desktop-warning {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-<%
-    // Replace 'YOUR_API_KEY' with your actual API key
-    String API_KEY = "ZA7Q4IIPEJFXL6R0";
-    String symbol = "AAPL"; // Example stock symbol
-    
-    try {
-        // Construct the URL for the API request
-        String url = "https://www.alphavantage.co/query?function=OPTION_CHAIN&symbol=" + symbol + "&apikey=" + API_KEY;
 
-        // Create a HTTP connection
-        URL apiUrl = new URL(url);
-        HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
-        connection.setRequestMethod("GET");
+<div class="container">
+    <h2>Add Funds</h2>
+    <form id="addFundsForm">
+        <div class="form-group">
+            <label for="amount">Enter Amount</label>
+            <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+        </div>
+        <h4>Select Payment Method</h4>
+        <div class="payment-methods">
+            <div class="payment-method" onclick="selectPaymentMethod('google-wallet')">
+                <i class="fa fa-google-wallet"></i>
+                <p>Google Wallet</p>
+            </div>
+            <div class="payment-method" onclick="selectPaymentMethod('visa')">
+                <i class="fa fa-cc-visa"></i>
+                <p>VISA</p>
+            </div>
+            <div class="payment-method" onclick="selectPaymentMethod('mastercard')">
+                <i class="fa fa-cc-mastercard"></i>
+                <p>Mastercard</p>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="initiatePayment()">Pay Now</button>
+        <div class="qr-code-container">
+            <p>Or, Generate QR Code:</p>
+            <div class="qr-code">
+                <!-- Placeholder for QR Code image -->
+                <img src="images/qr-code-placeholder.png" alt="QR Code" id="qrCodeImage">
+            </div>
+            <button type="button" onclick="generateQRCode()" class="qr-code-btn">Generate QR Code</button>
+        </div>
+        <div class="desktop-warning">
+            Note: UPI payments need to be opened on a mobile device with UPI-compatible apps installed.
+        </div>
+    </form>
+</div>
 
-        // Get the response code
-        int responseCode = connection.getResponseCode();
-        
-        if (responseCode == HttpURLConnection.HTTP_OK) {
-            // Read the response
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            StringBuilder responseData = new StringBuilder();
-            String inputLine;
-            while ((inputLine = in.readLine()) != null) {
-                responseData.append(inputLine);
-            }
-            in.close();
-
-            // Parse JSON response
-            JSONParser parser = new JSONParser();
-            JSONObject jsonResponse = (JSONObject) parser.parse(responseData.toString());
-
-            // Output JSON response
-            out.println("<pre>" + jsonResponse.toJSONString() + "</pre>");
-        } else {
-            out.println("Failed to fetch option chain data. HTTP Error Code: " + responseCode);
+<script>
+    function initiatePayment() {
+        var amount = document.getElementById('amount').value;
+        if (!amount) {
+            alert('Please enter an amount');
+            return;
         }
-    } catch (Exception e) {
-        out.println("An error occurred: " + e.getMessage());
-        e.printStackTrace();
+
+        // Example UPI details
+        var payeeVPA = 'rahul.dangi.sait-1@okicici';  // Replace with your actual UPI ID
+        var payeeName = 'Rahul Dangi';   // Replace with your actual name
+
+        var upiLink = 'upi://pay?pa=' + encodeURIComponent(payeeVPA) + '&pn=' + encodeURIComponent(payeeName) + '&am=' + amount + '&cu=INR';
+
+        if (isMobile()) {
+            window.location.href = upiLink;
+        } else {
+            document.querySelector('.desktop-warning').style.display = 'block';
+        }
     }
-%>
+
+    function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Chrome Mobile|CriOS|Mobile Safari/i.test(navigator.userAgent);
+    }
+
+    function generateQRCode() {
+        // Replace with logic to generate QR code image based on payment details
+        alert('Generating QR Code...');
+        // Example code to update QR code image (replace with actual generation logic)
+        var qrCodeImage = document.getElementById('qrCodeImage');
+        qrCodeImage.src = "rubic/public_html/assets/imgs/kubergroupsbi.jpg";  // Replace with actual QR code image URL or data
+    }
+
+    function selectPaymentMethod(method) {
+        // Implement visual indication of selected payment method if needed
+        // Example: Add a class to highlight the selected method
+        document.querySelectorAll('.payment-method').forEach(function(element) {
+            element.classList.remove('selected');
+        });
+        document.querySelector(`.payment-method.${method}`).classList.add('selected');
+    }
+</script>
+
 </body>
 </html>

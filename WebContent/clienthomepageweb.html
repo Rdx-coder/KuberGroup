@@ -8,130 +8,39 @@
     <title>HOME</title>
     <!-- font icons -->
     <link rel="stylesheet" href="./rubic/public_html/assets/vendors/themify-icons/css/themify-icons.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
     <!-- Bootstrap + Rubic main styles -->
 	<link rel="stylesheet" href="./rubic/public_html/assets/css/rubic.css">
+    <link rel="stylesheet" href="./rubic/public_html/assets/css/clienthomepage.css">
 
 </head>
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-}
-
-.header-title {
-    margin: 0;
-    margin-left: 10px;
-    font-size: 20px;
-    color: black;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-.nav-button, .action-button {
-    background: none;
-    border: none;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.nav-button:focus, .action-button:focus {
-    outline: none;
-}
-
-.nav-button:hover, .action-button:hover {
-    background-color: #f0f0f0;
-    border-radius: 4px;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
-    padding: 10px 0;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.footer-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nav-item {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.nav-item i {
-    margin-right: 8px;
-}
-
-.nav-item:hover {
-    background-color: #f0f0f0;
-    border-radius: 4px;
-}
-
-@media (max-width: 600px) {
-    .nav-item {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .nav-item i {
-        margin-right: 4px;
-    }
-}
-
-</style>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<header class="header d-flex justify-content-center" style="  background:aliceblue">
 
-     <header>
-        <div class="header-content">
-            <div class="header-left">
-                <button class="nav-button"><i class="fas fa-bars"></i></button>
-                <h1 class="header-title">KuberGroup</h1>
-            </div>
-            <div class="header-right">
-                <button class="action-button"><i class="fas fa-search"></i></button>
-                <button class="action-button"><i class="fas fa-cog"></i></button>
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20" >
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">Kuber</strong><span class="text-light">Group</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-dark shadow-none ml-md-1" href="tradingview.jsp">Live</a>
+                    </li>	
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-dark shadow-none ml-md-1" href="clientlogin.html">Login</a>
+                    </li>	
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-dark shadow-none ml-md-1" href="ClientLogout">Logout</a>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
-    </header>
+        
+    </nav>
+          <div class="container">
     
     <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
@@ -201,7 +110,7 @@ footer {
   "hasSymbolTooltip": true,
   "isMonoSize": true,
   "width": "100%",
-  "height": "70%"
+  "height": "100%"
 }
   </script>
 </div>
@@ -722,16 +631,40 @@ footer {
 
   
     
-   <footer >
-    <nav class="footer-nav">
-        <a href="https://kgstocks.in/KuberGroup/clienthomepageweb.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
-        <a href="https://kgstocks.in/KuberGroup/clientportfolio.jsp" class="nav-item"><i class="fas fa-briefcase"></i> Portfolio</a>
-            <a href="https://kgstocks.in/KuberGroup/clientstatus.jsp" class="nav-item"><i class="fas fa-wallet"></i> Wallet</a>
-        <a href="https://kgstocks.in/KuberGroup/clientprofile.jsp" class="nav-item"><i class="fas fa-user"></i> Profile</a>
-        
-    </nav>
-</footer>
+    <footer class="pt-5 text-center text-white" >
+        <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Get in Touch With Us</h4>
+            <div class="pb-2 pt-4">
+              <span><i class="fa fa-map-marker fa-2x"></i></span>
+            </div>
+            <p class="">Flat No 101,102 , 1st Floor, Gulshan Tower, Ram Nagar Extension, Opposites Rameshwar mandir, Amravti Maharashtra 444605.</p>
+          </div>
 
+          <div class="col-md-4">
+            <h4 class="text-capitalize">Contact Us</h4>
+            <div class="pb-2 pt-4">
+              <span><i class="fa fa-phone fa-2x"></i></span>
+            </div>
+            <p class="text-capitalize">Mobile : +91 8830993151</p>
+          </div>
+        <div class="col-md-4 text-light">
+          <h4 class="text-capitalize">Email : </h4>
+          <div class="pb-2 pt-4">
+            <span><i class="fa fa-envelope fa-2x"></i></span>
+          </div>
+          <p class="">Email : support@kubergroup.in</p>
+        </div>
+      </div>
+       
+          <div class="row">
+            <div class="col-md-12">
+              <p class="copyright-text"> Copyright © 2023 All Rights Reserved Kuber Group</p>
+            </div>
+          </div>
+        </div>
+      </footer>
 
 	<!-- core  -->
     <script src="./rubic/public_html/assets/vendors/jquery/jquery-3.4.1.js"></script>

@@ -33,16 +33,16 @@ public final class GoogleAuthHelper {
 	/**
 	 * Please provide a value for the CLIENT_ID constant before proceeding, set this up at https://code.google.com/apis/console/
 	 */
-	private static final String CLIENT_ID = "225733135981-vi4pk34vf0dqq1akdet09olv8mmh6nov.apps.googleusercontent.com";
+	private static final String CLIENT_ID = "186991864408-sa3qbima8er2ssasger6io30stsevla5.apps.googleusercontent.com";
 	/**
 	 * Please provide a value for the CLIENT_SECRET constant before proceeding, set this up at https://code.google.com/apis/console/
 	 */
-	private static final String CLIENT_SECRET = "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";
+	private static final String CLIENT_SECRET = "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";
 
 	/**
 	 * Callback URI that google will redirect to after successful authentication
 	 */
-	private static final String CALLBACK_URI = "https://kubergroup.in/KuberGroup/clientregistration.jsp";
+	private static final String CALLBACK_URI = "https://kgstocks.in/KuberGroup/clientregistration.jsp";
 
 	//private static final String CALLBACK_URI = "http://localhost:8080/KuberGroup/clientregistration.jsp";
 	

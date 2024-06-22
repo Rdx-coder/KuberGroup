@@ -194,8 +194,8 @@ String email = (String) session.getAttribute("id");
             <canvas id="profitLossChart" width="400" height="400"></canvas>
         </div>
     </div>
-
-    <div class="card">
+    
+<div class="card">
         <div class="btn-container">
             <form action="withdraw.html" method="post">
                 <input type="hidden" name="email" value="<%= email %>">
@@ -216,7 +216,10 @@ String email = (String) session.getAttribute("id");
             </form>
         </div>
     </div>
-</div>
+    </div>            
+    
+
+    
       
 
 <%
@@ -265,6 +268,43 @@ String email = (String) session.getAttribute("id");
             } while (rs.next());
         	} else {
             %>
+       <div class="container">
+             <div class="card">
+    <div class="card-body">
+        <div class="wallet-header">
+            <div class="wallet-title"><i class="fas fa-wallet balance-icon"></i> My Wallet</div>
+            <div class="wallet-subtitle">Your investment wallet balance</div>
+            <div class="balance"><i class="fas fa-coins"></i> 0</div>
+            <div class="profit"><i class="fas fa-arrow-up"></i> Profit: 0</div>
+            <div class="loss"><i class="fas fa-arrow-down"></i> Loss: 0</div>
+            <div class="current-amount">
+                <i class="fas fa-hand-holding-usd"></i> Current Amount: 0
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+        <div class="btn-container">
+            <form action="withdraw.html" method="post">
+                <input type="hidden" name="email" value="<%= email %>">
+                <button type="submit" class="btn withdraw-btn"><i class="fas fa-money-bill-wave"></i> Withdraw</button>
+            </form>
+            <form action="addfund.html" method="post">
+                <input type="hidden" name="email" value="<%= email %>">
+                <button class="btn deposit-btn"><i class="fas fa-coins"></i> Deposit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="btn-container">
+            <form action="withdrawhistory.jsp" method="post">
+                <input type="hidden" name="email" value="<%= email %>">
+                <button class="btn history-btn"><i class="fas fa-history"></i> View All Transactions</button>
+            </form>
+        </div>
+    </div>
+</div>            
             <%
         	}
       		  %>
